@@ -1,0 +1,38 @@
+{% extends 'basecontact.html.twig'%}
+
+{% block body %}
+
+    <br/>
+
+    <h1 class="titreRepertoire"> Contacts {{ repertoire.nomRep }} </h1>
+
+    <br/>
+
+    <div class="row">
+        <div class="col col-lg-2">
+        </div>
+
+        <div class="col col-lg-8">
+            <section class="contacts row">
+                {% for contact in contacts %}
+                    <article>
+                        <div class="card cardSpace" style="width: 16rem;">
+                            <div class="card-header centrer titreContact ">
+                                {{contact.nomContact}} {{contact.prenomContact}}
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item centrer itemContact">{{contact.telContact}}</li>
+                                <li class="list-group-item centrer itemContact">{{contact.emailContact}}</li>
+                                <li class="list-group-item centrer itemContact">{{contact.infoContact}}
+                            </ul>
+                        </div>
+                    </article>
+                {% endfor %}
+            </section>
+        </div>
+
+        <div class="col col-lg-2">
+        </div> 
+    </div>
+
+{% endblock %}

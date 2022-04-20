@@ -1,0 +1,55 @@
+{% extends 'basecontact.html.twig'%}
+
+{% block body %}
+
+    <br/>
+    <h1 class="titreRepertoire"> Modification du Contact</h1>
+    <br/>
+
+    <div class="row">
+
+        <div class="col col-lg-4">
+        </div>
+
+        <div class="col col-lg-4">
+
+            <form action="{{ path('updateContact', {'id': contact.id, 'idRep': repertoire.id }) }}" method="post" class="text-center border border-light p-5" enctype="multipart/form-data">
+
+                <p class="h4 mb-4 headform">Contact</p>
+
+                <!-- Nom du contact -->
+                <input type="text"  name="nomContact" class="form-control mb-4" placeholder="Nom" value="{{contact.nomContact}}">
+
+                <!-- Nom du contact -->
+                <input type="text"  name="prenomContact" class="form-control mb-4" placeholder="Prénom" value="{{contact.prenomContact}}">
+
+                <!-- Téléphone du contact -->
+                <input type="tel" id="tel" name="telContact" class="form-control mb-4" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="06-98-76-76-54" value="{{contact.telContact}}" required>
+
+                <!-- email du contact -->
+                <input  type="email" id="email"  name="emailContact" class="form-control mb-4" placeholder="yaya@exemple.com" value="{{contact.emailContact}}">
+
+                <!-- Information sur le contact -->
+                <textarea class="form-control mb-4" name="infoContact" rows="2" placeholder=" Ex: FaceBook : Son_FaceBook; Instagram : Son_Instagram...">{{contact.infoContact}}</textarea>
+
+
+                <hr>
+                <!-- Sign up button -->
+                <button type="submit" id ="idbtValiderAjoutContact" name="btCValider"  class="btn btn-secondary my-4 btn-block">Valider</button>
+
+                <hr>
+
+            </form>
+            <!-- Fin du formulaire -->
+                    
+        </div>
+
+        <div class="col col-lg-4">
+        </div>
+
+    </div>
+ 
+{% endblock %}
+{% block javascripts %}
+    <script src="js/ajoutContact.js"></script>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html.twig'%}
+
+{% block body %}
+
+    <br/>
+
+    <h1 class="titreRepertoire"> Gestion des répertoires</h1>
+
+    <br/>
+
+    <div class="row">
+        <div class="col col-lg-2">
+        </div>
+
+        <div class="col col-lg-8">
+            <table class="table table-bordered table-hover table-responsive-lg">
+                <thead>
+                    <tr>
+                        <th>Nom </th>
+                        <th>Informations</th>
+                        <th>Image</th>
+                        <th>Gestion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for repertoire in repertoires %}
+                    
+                    <tr>
+                        <td>{{repertoire.nomRep}}</td>
+                        <td>{{repertoire.infoRep}}</td>
+                        <td>{{repertoire.logoRep}}</td>
+                        <td><a href="{{ path('modifRep', {'id': repertoire.id }) }}">Modifier</a> | <a href="{{ path('supRep', {'id': repertoire.id }) }}">Supprimer</a></td>
+                    </tr>
+                
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col col-lg-2">
+        </div> 
+    </div>
+
+{% endblock %}

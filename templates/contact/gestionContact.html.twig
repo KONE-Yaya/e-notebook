@@ -1,0 +1,48 @@
+{% extends 'basecontact.html.twig'%}
+
+{% block body %}
+
+    <br/>
+
+    <h1 class="titreRepertoire"> Contacts {{ repertoire.nomRep }} </h1>
+
+    <br/>
+
+    <div class="row">
+        <div class="col col-lg-1">
+        </div>
+
+        <div class="col col-lg-10">
+            <table class="table table-bordered table-hover table-responsive-lg">
+                <thead>
+                    <tr>
+                        <th>Nom </th>
+                        <th>Prénom</th>
+                        <th>Téléphone</th>
+                        <th>Email</th>
+                        <th>Informations</th>
+                        <th>Gestion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for contact in contacts %}
+                    
+                    <tr>
+                        <td>{{contact.nomContact}}</td>
+                        <td>{{contact.prenomContact}}</td>
+                        <td>{{contact.telContact}}</td>
+                        <td>{{contact.emailContact}}</td>
+                        <td>{{contact.infoContact}}</td>
+                        <td><a href="{{ path('modifContact', {'idC': contact.id, 'id': repertoire.id }) }}">Modifier</a> | <a href="{{ path('supContact', {'id': contact.id, 'idRep': repertoire.id }) }}">Supprimer</a></td>
+                    </tr>
+                
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col col-lg-1">
+        </div> 
+    </div>
+
+{% endblock %}

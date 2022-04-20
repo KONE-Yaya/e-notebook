@@ -1,0 +1,11 @@
+--------------Config BDD-------------------------
+Vérifier si le .ENV les configuration sont correctes avec les configurations sur votre machine.
+
+Port Mysql par exemple, nom de la base de donnée par emple...
+
+Nom BDD: repertoiredb
+
+
+CREATE TABLE contact (id INT AUTO_INCREMENT NOT NULL, nom_contact VARCHAR(255) NOT NULL, prenom_contact VARCHAR(255) DEFAULT NULL, tel_contact VARCHAR(255) NOT NULL, email_contact VARCHAR(255) DEFAULT NULL, info_contact VARCHAR(255) DEFAULT NULL, id_rep INT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB;
+
+CREATE TABLE repertoire (id INT AUTO_INCREMENT NOT NULL, nom_rep VARCHAR(255) NOT NULL, logo_rep VARCHAR(255) NOT NULL, info_rep VARCHAR(255) DEFAULT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB;

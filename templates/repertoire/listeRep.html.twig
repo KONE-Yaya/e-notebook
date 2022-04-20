@@ -1,0 +1,36 @@
+{% extends 'base.html.twig'%}
+
+{% block body %}
+<br/>
+<h1 class="titreRepertoire"> Bienvenue dans NoteBo0k++</h1>
+<br/>
+    <div class="row">  
+        <div class="col col-lg-1">
+        </div>
+        <div class="col col-lg-10">
+            <section class="repertoires row">
+                {% for repertoire in repertoires %}
+                    <article class="col col-lg-3">
+                        <div class="card mb-3">
+                            <h4 class="card-header centrer headform">{{repertoire.nomRep}}</h4>
+                            <div>
+                                <img style="height: 150px; width: 100%; display: block;" src="../images/{{repertoire.logoRep}}" alt="Image du Répertoire">
+                            </div>
+                            <div class="card-body text-muted centrer">
+                                <p>{{repertoire.infoRep}}</p>
+                            </div>
+                            <div class="card-footer centrer">
+                                <button type="button" class="btn btn-primary"><a href="{{ path('listeContacts', {'id': repertoire.id })}}">Consulter</a></button>
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </section>
+        </div>
+        <div class="col col-lg-1">
+        </div>
+    </div>
+    
+{% endblock %}
+{% block javascripts %}
+{% endblock %} 

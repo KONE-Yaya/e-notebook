@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "Lemon";
+    src: url(../font/Lemon.otf) format('truetype');
+  }
+  
+  /*body{
+    
+    background-image: url("../images/test.jpg"); /* The image used */ 
+    /*background-color: #cccccc; /* Used if the image is unavailable */
+    /*height: 500px;*/ /* You must set a specified height */
+    /*background-position: center; /* Center the image */
+    /*background-repeat: no-repeat; /* Do not repeat the image */
+    /*background-size: cover; /* Resize the background image to cover the entire container */
+   
+  /*}*/
+
+  .col-lg-3{
+    max-width: 25%;
+  }
+
+ .row {
+  margin-left: 0px;
+  margin-right: 0px;
+
+ }
+
+  .titreRepertoire{
+    font-family: "Lemon";
+    font-size: 65px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+  } 
+  article{
+    padding: 4px;
+  }
+
+  .centrer{
+    text-align: center;
+  }
+
+  .textenav{
+    color: darkslategrey ;
+    font-family: 'Hobo Std' ;
+  }
+
+  .headform{
+    font-family: 'Maiandra GD' ;
+  }
+
+    /* Styles pour les répertoires */
+ 
+
+  /* Styles pour les contacts */
+  
+  .contacts{
+    padding: 0px;
+  }
+
+  .cardSpace{
+    margin: 3px;
+  }
+
+  .titreContact{
+    font-size: 20px;
+  } 
+  .itemContact{
+    font-size: 14px;
+  }
+
+/* glyphicons in input test css */
+
+  /* enable absolute positioning */
+.inner-addon { 
+  position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+position: absolute;
+padding: 10px;
+pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }

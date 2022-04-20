@@ -1,0 +1,47 @@
+{% extends 'base.html.twig'%}
+
+{% block body %}
+    <br/>
+    <h1 class="titreRepertoire"> Modification du Répertoire</h1>
+    <br/>
+
+    <div class="row">
+
+        <div class="col col-lg-4">
+        </div>
+  
+        <div class="col col-lg-4">
+
+            <form class="text-center border border-light p-5" action="{{ path('updateRep',{'id': repertoire.id }) }}" method="post"  enctype="multipart/form-data">
+
+                <p class="h4 mb-4">Répertoire</p>
+
+                <!-- Nom du repertoire -->
+                <input type="text"  name="nomRepertoire" class="form-control mb-4" value="{{repertoire.nomRep}}" />
+
+                <!-- Information sur le contact -->
+                <textarea class="form-control mb-4" name="infoRepertoire" rows="2">{{repertoire.infoRep}}</textarea>
+
+                <!-- Logo ou Image du repertoire -->
+                <div class="form-group mb-4">
+                    <input type="file" class="form-control-file" name="logoRepertoire" aria-describedby="fileHelp" accept="image/*" value="{{repertoire.logoRep}}">
+                    <small id="fileHelp" class="form-text text-muted">Choisissez une image pour votre repertoire.</small>
+                </div>
+
+                <hr>
+                <!-- Sign up button -->
+                <button type="submit" name="btValider" class="btn btn-secondary my-4 btn-block">Valider</button>
+
+                <hr>
+
+            </form>
+            <!-- Default form register -->
+                    
+        </div>
+
+        <div class="col col-lg-4">
+        </div>
+
+    </div>
+
+{% endblock %}

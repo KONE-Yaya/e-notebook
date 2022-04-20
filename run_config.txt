@@ -1,0 +1,9 @@
+- Lancer l'application par défaut sur le port de Symfony:
+
+php bin/console server:run
+
+- Lancer l'application sur le port de Symfony que vous voulez:
+
+php -S localhost:8000 -t public
+
+
